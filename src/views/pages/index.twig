@@ -1,0 +1,18 @@
+{% extends "../partials/layout.twig" %}
+{% block content %}
+    home page
+
+    {% for i in range(1, 10) %}
+        {% if i != 10 %}      
+            {{ i }}, 
+        {% else %}
+            {{ i }}
+        {% endif %}
+    {% endfor %}
+
+    {% for post in htmlWebpackPlugin.options.posts %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.content}}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}
