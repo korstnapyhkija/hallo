@@ -1,6 +1,6 @@
 //1
 let sum = 0;
-for (var x = 0; x < 1000; x++){
+for (let x = 0; x < 1000; x++){
     if (x % 3 === 0 || x % 5 === 0){
        sum += x;
     }
@@ -32,7 +32,7 @@ function fibSeries() {
 console.log(sumFibonacci(4000000));
 
 //3
-var palindromes = [];
+let palindromes = [];
 
 function reverseString(str) {
     for (var i = str.length - 1, o = ''; i >= 0; o += str[i--]) { }
@@ -81,3 +81,37 @@ function prime(index) {
 }
 
 console.log(prime(1e4 + 1));
+
+let people = [
+    {name: "vello", age: 34},
+    {name: "martin", age: 17},
+    {name: "kaspar", age: 64},
+    {name: "manivald", age: 58},
+    {name: "marina", age: 23},
+    {name: "virginia", age: 14},
+    {name: "malle", age: 83},
+    {name: "maiu", age: 26},
+];
+const findAverageAge = (arr) => {
+    const { length } = arr;
+    return arr.reduce((acc, val) => {
+       return acc + (val.age/length);
+    }, 0);
+ };
+ console.log(findAverageAge(people));
+
+ arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+function calculateAverage(array) {
+    var total = 0;
+    var count = 0;
+
+    array.forEach(function(item, index) {
+        total += item;
+        count++;
+    });
+
+    return total / count;
+}
+
+console.log(calculateAverage(arry));
